@@ -30,20 +30,22 @@ Add `nuxt-use-motion` to the `buildModules` section of `nuxt.config.js`
 Configure your animations 🤹
 
 ```js
+// nuxt.config.js
 {
-  // app/motion.config.js
-  directives: {
-    'pop-bottom': {
-      initial: {
-        scale: 0,
-        opacity: 0,
-        y: 100
-      },
-      visible: {
-        scale: 1,
-        opacity: 1,
-        y: 0
-      },
+  motion: {
+    directives: {
+      'pop-bottom': {
+        initial: {
+          scale: 0,
+          opacity: 0,
+          y: 100
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          y: 0
+        },
+      }
     }
   }
 }
