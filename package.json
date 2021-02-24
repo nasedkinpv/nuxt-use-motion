@@ -1,6 +1,6 @@
 {
   "name": "nuxt-use-motion",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "🤹 A Nuxt module putting your components in motion",
   "keywords": [
     "nuxt",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.20.2",
-    "@vueuse/motion": "^1.0.6",
+    "@vueuse/motion": "^1.0.7",
     "defu": "^3.2.2",
     "vue-demi": "^0.6.0"
   },

@@ -2003,7 +2003,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@1.0.0-rc.2":
+"@vue/composition-api@1.0.0-rc.2", "@vue/composition-api@^1.0.0-rc.2":
   version "1.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.2.tgz#9d90e507cf71634aad51ab878b141c2a4739d523"
   integrity sha512-R4XEvT+qXiT/lnsLzqhjkR/L/ALuNeeQPZqredpLduGKwZtmt2l5I3kT1W+c/157hrY732eFlsPUGz/q9vFaYg==
@@ -2018,14 +2018,16 @@
     "@vueuse/shared" "4.2.2"
     vue-demi latest
 
-"@vueuse/motion@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@vueuse/motion/-/motion-1.0.6.tgz#626f4c448b20920dbca13b0bc3a3a6af626537f6"
-  integrity sha512-T528BjnzIYW+uQ14eHOuVJZbSbbOMeqt9m9AjX538DC8+RrUBEbU8Y3kIhh6n6T1nVP5eB3ySHbHwlV+MK+9Dg==
+"@vueuse/motion@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@vueuse/motion/-/motion-1.0.7.tgz#2987a59cee42234ad579aed78bd48a3f8dc3c99e"
+  integrity sha512-LgI9kgOqxg/IZQxLbYUwE6s5+zTH4PJgW8B5gI4AMxsIAqmMaH5QNazztU2m6QRTzPpHnce5sPkEb+47Tc6GPA==
   dependencies:
     "@vueuse/core" "^4.2.1"
     popmotion "^9.2.1"
     vue-demi latest
+  optionalDependencies:
+    "@vue/composition-api" "^1.0.0-rc.2"
 
 "@vueuse/shared@4.2.2":
   version "4.2.2"
