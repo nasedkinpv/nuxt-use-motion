@@ -21,8 +21,8 @@ npm i -D nuxt-use-motion
 Add `nuxt-use-motion` to the `buildModules` section of `nuxt.config.js`
 
 ```js
+// nuxt.config.js
 {
-  // nuxt.config.js
   buildModules: ['nuxt-use-motion']
 }
 ```
