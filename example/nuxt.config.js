@@ -1,13 +1,19 @@
 export default {
   buildModules: ['../src/module.ts'],
   motion: {
-    test: {
-      motion: 1,
-    }
-  },
-  motions: {
-    test: {
-      motions: 1,
+    directives: {
+      'slide-rotate-top': {
+        initial: {
+          y: -400,
+          opacity: 0,
+          rotate: 90
+        },
+        enter: {
+          y: 0,
+          opacity: 1,
+          rotate: 0
+        }
+      }
     }
   }
 }
