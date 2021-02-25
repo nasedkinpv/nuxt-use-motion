@@ -28,9 +28,9 @@
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.20.2",
-    "@vueuse/motion": "^1.0.7",
+    "@vueuse/motion": "^1.0.9",
     "defu": "^3.2.2",
-    "vue-demi": "^0.6.0"
+    "vue-demi": "^0.6.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "latest",
