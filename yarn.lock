@@ -2003,36 +2003,34 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@1.0.0-rc.2", "@vue/composition-api@^1.0.0-rc.2":
+"@vue/composition-api@1.0.0-rc.2":
   version "1.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.2.tgz#9d90e507cf71634aad51ab878b141c2a4739d523"
   integrity sha512-R4XEvT+qXiT/lnsLzqhjkR/L/ALuNeeQPZqredpLduGKwZtmt2l5I3kT1W+c/157hrY732eFlsPUGz/q9vFaYg==
   dependencies:
     tslib "^2.1.0"
 
-"@vueuse/core@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.2.2.tgz#ecbba4ba05e0360e9c9079b32e149fac803a1020"
-  integrity sha512-NMU3Vr4eBiNrPzCoUH5ptNj+DETg85Vtww0OJjaQEXobDTH28gzbLJseqCh4m3NYR92C5qlXRnzhSvWOoR/uLg==
+"@vueuse/core@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.3.0.tgz#409d1c8fc0b7fffcf5b5388dfc487762bb936b0c"
+  integrity sha512-PQ3r6wZDCN3pY+UBB5NLQdRfwiasd8MmWppuzpvNE2Sr8T48gmWXDWw3GG4EHMXnuz5EBfQG+U+1TjSaGaK6/w==
   dependencies:
-    "@vueuse/shared" "4.2.2"
+    "@vueuse/shared" "4.3.0"
     vue-demi latest
 
-"@vueuse/motion@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/motion/-/motion-1.1.0.tgz#4461ac993bba8563aa1161cfe5ebe33ac7a310b8"
-  integrity sha512-psKKXqkecsUgYsWmU/kf8hDV1AvVw4W+mAs7oFJeuX9KvqHsccfW8dkrgMY+jS47hzKOOcj0gySuAzmiNk4G+g==
+"@vueuse/motion@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@vueuse/motion/-/motion-1.1.7.tgz#91a59b8af4e4ad57963c6e9f1c5c7328142f1985"
+  integrity sha512-7psFTS2lzDLWhGAErrUvZbv03fkqHpWLJPQiMFbu0Jq/dbaFIij73zrG3QE7S4SlE5rQl2QI3f+K+HhlIBjqtQ==
   dependencies:
-    "@vueuse/core" "^4.2.2"
+    "@vueuse/core" "^4.3.0"
     popmotion "^9.2.1"
     vue-demi latest
-  optionalDependencies:
-    "@vue/composition-api" "^1.0.0-rc.2"
 
-"@vueuse/shared@4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-4.2.2.tgz#e52ee278b929f028117c0ca1792b24df462bff80"
-  integrity sha512-yudh4jt0SxaW0i3j2iumI8GTloA8aUpLwGaBw9Xv2rQCdZvOZpXpvpGEz8EsMK793ySs+d5S4/opItlxuzjtSg==
+"@vueuse/shared@4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-4.3.0.tgz#82e05dc2941642814ac6fcbb5f9076c38c052968"
+  integrity sha512-udc1ADIYwizTK/iSfjZQj6+QDFM099oHuX0Sj/yv0NgE9eSODcesV4zO7PtvmJanzw43hCdvtdGBz8miyRkHCQ==
   dependencies:
     vue-demi latest
 
@@ -9881,10 +9879,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-demi@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.6.1.tgz#6949c900a295d9c40e1fa5a74a2849b58cc57325"
-  integrity sha512-2DI0owOzgEDnEBoXpp0nTBquAWLZqVf/+AOJpPUnviT17unMELEPNy5BdSRnQEz+DA0STtqaz+MZtwhzlDHm5Q==
+vue-demi@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.7.0.tgz#34aff70a9d9a45d983d68f5c33bb70f6d19500e1"
+  integrity sha512-yOQ/BMfvTFbguwxQ1h6USEFkxvOI8ThhyZ1+57vlOl4jBZKC6ThmkzuQv4KOv4ItdxTj/foZBR6Lr5+tcr7nqg==
 
 vue-demi@latest:
   version "0.6.0"
