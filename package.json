@@ -24,7 +24,7 @@
     "build": "siroc build",
     "dev": "nuxt example",
     "build:example": "nuxt build example",
-    "serve:example": "nuxt serve example",
+    "serve:example": "nuxt start example",
     "lint": "eslint --ext .js,.ts,.vue .",
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish"
   },
