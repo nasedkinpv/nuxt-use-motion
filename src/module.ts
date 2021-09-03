@@ -1,7 +1,7 @@
+import { resolve } from 'path'
 import type { Module } from '@nuxt/types'
 import type { MotionVariants } from '@vueuse/motion'
 import defu from 'defu'
-import { resolve } from 'path'
 
 export interface ModuleOptions {
   directives?: {
@@ -25,13 +25,13 @@ const nuxtModule: Module<ModuleOptions> = async function (moduleOptions) {
 
   this.addTemplate({
     fileName: 'motion.config.js',
-    src: resolve(__dirname, '../templates', 'motion.config.js'),
+    src: resolve(__dirname, '../templates', 'motion.config.js')
   })
 
   this.addPlugin({
     src: resolve(__dirname, '../templates', 'motion.js'),
     fileName: 'motion.js',
-    options,
+    options
   })
 
   this.nuxt.options.build.transpile.push('defu')
@@ -46,12 +46,12 @@ const nuxtModule: Module<ModuleOptions> = async function (moduleOptions) {
 declare module '@nuxt/types' {
   interface NuxtConfig {
     [CONFIG_KEY]?: ModuleOptions
-    /**@deprecated use motion option instead */
+    /** @deprecated use motion option instead */
     [CONFIG_KEY2]?: ModuleOptions
   } // Nuxt 2.14+
   interface Configuration {
     [CONFIG_KEY]?: ModuleOptions
-    /**@deprecated use motion option instead */
+    /** @deprecated use motion option instead */
     [CONFIG_KEY2]?: ModuleOptions
   } // Nuxt 2.9 - 2.13
 }

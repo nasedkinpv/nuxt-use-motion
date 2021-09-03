@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="block" v-motion-slide-rotate-top />
+    <div v-motion-slide-rotate-top class="block" />
   </div>
 </template>
 
