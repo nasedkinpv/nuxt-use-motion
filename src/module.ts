@@ -36,6 +36,8 @@ const nuxtModule: Module<ModuleOptions> = async function (moduleOptions) {
 
   this.nuxt.options.build.transpile.push('defu')
 
+  this.nuxt.options.build.transpile.push('@vueuse/motion')
+
   await this.addModule('@nuxtjs/composition-api/module')
 }
 
