@@ -38,6 +38,8 @@ const nuxtModule: Module<ModuleOptions> = async function (moduleOptions) {
 
   this.nuxt.options.build.transpile.push('@vueuse/motion')
 
+  this.nuxt.options.build.transpile.push('@vueuse/shared')
+
   await this.addModule('@nuxtjs/composition-api/module')
 }
 
