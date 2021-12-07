@@ -1,5 +1,10 @@
-export default {
-  buildModules: ['../src/module.ts'],
+import { resolve } from 'path'
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+const modulePath = resolve(__dirname, '../src/module.ts')
+
+export default defineNuxtConfig({
+  buildModules: [modulePath],
   motion: {
     directives: {
       'slide-rotate-top': {
@@ -16,4 +21,4 @@ export default {
       }
     }
   }
-}
+})
