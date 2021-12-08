@@ -10,7 +10,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "#app": ["./node_modules/@nuxt/bridge/dist/runtime"]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }

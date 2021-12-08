@@ -1,6 +1,6 @@
 {
   "name": "nuxt-use-motion",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "description": "🤹 A Nuxt module putting your components in motion",
   "keywords": [
     "nuxt",
@@ -14,14 +14,21 @@
   ],
   "repository": "https://github.com/Tahul/nuxt-use-motion",
   "license": "MIT",
-  "main": "dist/module.js",
+  "main": "dist/module.mjs",
   "types": "dist/module.d.ts",
+  "module": "dist/module.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
   "files": [
     "dist",
     "templates"
   ],
   "scripts": {
-    "build": "siroc build",
+    "build": "unbuild",
     "dev": "nuxt example",
     "build:example": "nuxt build example",
     "serve:example": "nuxt start example",
@@ -29,12 +36,13 @@
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "dependencies": {
-    "@nuxtjs/composition-api": "^0.29.2",
     "@vueuse/motion": "2.0.0-beta.4",
-    "defu": "^5.0.0",
-    "vue-demi": "^0.11.4"
+    "vue-demi": "^0.12.1",
+    "defu": "^5.0.0"
   },
   "devDependencies": {
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@latest",
     "@babel/plugin-transform-runtime": "latest",
     "@babel/preset-env": "latest",
     "@babel/preset-typescript": "latest",
@@ -44,7 +52,7 @@
     "babel-eslint": "latest",
     "eslint": "latest",
     "nuxt-edge": "latest",
-    "siroc": "latest",
+    "unbuild": "0.6.3",
     "standard-version": "latest"
   },
   "publishConfig": {
