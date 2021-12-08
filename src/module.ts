@@ -1,6 +1,6 @@
 import { resolve } from 'path'
-import type { Module } from '@nuxt/types'
-import type { MotionVariants } from '@vueuse/motion'
+import { defineNuxtModule, addTemplate, addPluginTemplate } from '@nuxt/kit'
+import { MotionVariants } from '@vueuse/motion'
 import defu from 'defu'
 
 export interface ModuleOptions {
@@ -13,51 +13,66 @@ export interface ModuleOptions {
 const DEFAULTS: ModuleOptions = {}
 
 const CONFIG_KEY = 'motion'
-const CONFIG_KEY2 = 'motions'
 
-const nuxtModule: Module<ModuleOptions> = async function (moduleOptions) {
-  const options: ModuleOptions = defu(
-    this.options[CONFIG_KEY]!,
-    this.options[CONFIG_KEY2]!,
-    moduleOptions,
-    DEFAULTS
-  )
+export default defineNuxtModule({
+  name: 'nuxt-use-motion',
+  defaults: DEFAULTS,
+  configKey: CONFIG_KEY,
+  setup(moduleOptions, nuxt) {
+    const options: ModuleOptions = defu(moduleOptions, DEFAULTS)
 
-  this.addTemplate({
-    fileName: 'motion.config.js',
-    src: resolve(__dirname, '../templates', 'motion.config.js')
-  })
+    addTemplate({
+      fileName: 'motion.config.js',
+      src: resolve(__dirname, '../templates', 'motion.config.js')
+    })
 
-  this.addPlugin({
-    src: resolve(__dirname, '../templates', 'motion.js'),
-    fileName: 'motion.js',
-    options
-  })
+    addPluginTemplate({
+      src: resolve(__dirname, '../templates', 'motion.js'),
+      fileName: 'motion.js',
+      options
+    })
 
-  this.nuxt.options.build.transpile.push('defu')
+    if (!nuxt.options.build.transpile) {
+      nuxt.options.build.transpile = []
+    }
 
-  this.nuxt.options.build.transpile.push('@vueuse/motion')
+    const transpileList = nuxt.options.build.transpile
 
-  this.nuxt.options.build.transpile.push('@vueuse/shared')
+    // Transpile necessary packages at build time
+    ;['defu', '@vueuse/motion', '@vueuse/shared', '@vueuse/core'].forEach(
+      (pkgName) => {
+        if (!transpileList.includes(pkgName)) {
+          transpileList.push(pkgName)
+        }
+      }
+    )
 
-  this.nuxt.options.build.transpile.push('@vueuse/core')
+    /**
+     * Workaround for TSLib issue on @nuxt/bridge and nuxt3
+     */
 
-  await this.addModule('@nuxtjs/composition-api/module')
-}
+    if (!nuxt.options.alias) {
+      nuxt.options.alias = {}
+    }
 
-;(nuxtModule as any).meta = require('../package.json')
+    if (!nuxt.options.alias.tslib) {
+      nuxt.options.alias.tslib = 'tslib/tslib.es6.js'
+    }
+  }
+})
 
-declare module '@nuxt/types' {
+declare module '@nuxt/kit' {
   interface NuxtConfig {
     [CONFIG_KEY]?: ModuleOptions
-    /** @deprecated use motion option instead */
-    [CONFIG_KEY2]?: ModuleOptions
-  } // Nuxt 2.14+
+  }
+
   interface Configuration {
     [CONFIG_KEY]?: ModuleOptions
-    /** @deprecated use motion option instead */
-    [CONFIG_KEY2]?: ModuleOptions
-  } // Nuxt 2.9 - 2.13
+  }
 }
 
-export default nuxtModule
+declare module '@nuxt/schema' {
+  interface NuxtConfig {
+    [CONFIG_KEY]?: ModuleOptions
+  }
+}
