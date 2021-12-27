@@ -36,12 +36,12 @@
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "dependencies": {
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
     "@vueuse/motion": "2.0.0-beta.4",
     "vue-demi": "^0.12.1",
     "defu": "^5.0.0"
   },
   "devDependencies": {
-    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
     "@nuxt/bridge": "npm:@nuxt/bridge-edge@latest",
     "@babel/plugin-transform-runtime": "latest",
     "@babel/preset-env": "latest",
@@ -52,7 +52,7 @@
     "babel-eslint": "latest",
     "eslint": "latest",
     "nuxt-edge": "latest",
-    "unbuild": "0.6.3",
+    "unbuild": "0.6.7",
     "standard-version": "latest"
   },
   "publishConfig": {
