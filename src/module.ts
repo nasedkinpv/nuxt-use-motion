@@ -15,9 +15,15 @@ const DEFAULTS: ModuleOptions = {}
 const CONFIG_KEY = 'motion'
 
 export default defineNuxtModule({
-  name: 'nuxt-use-motion',
+  meta: {
+    name: 'nuxt-use-motion',
+    configKey: CONFIG_KEY,
+    compatibility: {
+      nuxt: '>=3.0.0',
+      bridge: true
+    }
+  },
   defaults: DEFAULTS,
-  configKey: CONFIG_KEY,
   setup(moduleOptions, nuxt) {
     const options: ModuleOptions = defu(moduleOptions, DEFAULTS)
 
