@@ -13,7 +13,7 @@ For a better **understanding** of this **module**, you should check out the orig
 Once you installed it, add `nuxt-use-motion` dependency to your project
 
 ```bash
-yarn add --dev nuxt-use-motion
+pnpm add --dev nuxt-use-motion
 # or
 npm i -D nuxt-use-motion
 ```
@@ -76,8 +76,8 @@ To see more about how to **control** your declared **variants**, check out [**Mo
 ## Development
 
 1. Clone this repository
-2. Install dependencies using `yarn install`
-3. Start development server using `yarn dev`
+2. Install dependencies using `pnpm install`
+3. Start development server using `pnpm dev`
 
 ## License
 

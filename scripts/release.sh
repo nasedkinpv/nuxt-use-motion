@@ -3,8 +3,8 @@
 # Restore all git changes
 git restore -s@ -SW  -- demo docs src tests
 
-# Resolve yarn
-yarn
+# Resolve pnpm
+pnpm
 
 # Update token
 if [[ ! -z ${NODE_AUTH_TOKEN} ]] ; then
