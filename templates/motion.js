@@ -1,5 +1,5 @@
 import { MotionPlugin } from '@vueuse/motion'
-import { defineNuxtPlugin } from '@nuxt/kit'
+import { defineNuxtPlugin } from '#app'
 import defu from 'defu'
 import appOptions from './motion.config'
 
