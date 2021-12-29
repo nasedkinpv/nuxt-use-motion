@@ -5,7 +5,7 @@ import appOptions from './motion.config'
 
 const options = defu(appOptions, <%= JSON.stringify(options, null, 2) %>)
 
-defineNuxtPlugin(
+export default defineNuxtPlugin(
   (nuxtApp) => {
     nuxtApp.vueApp.use(MotionPlugin, options)
   }
