@@ -19,7 +19,7 @@ export default defineNuxtModule({
     name: 'nuxt-use-motion',
     configKey: CONFIG_KEY,
     compatibility: {
-      nuxt: '>=3.0.0',
+      nuxt: '>=2.0.0',
       bridge: true
     }
   },
